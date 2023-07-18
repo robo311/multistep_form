@@ -1,6 +1,6 @@
 import { useState } from 'react'
 import SidePanel from "./components/SidePanel"
-import PersonalInfo from "./components/personalInfo"
+import PersonalInfo from "./components/PersonalInfo"
 import SelectPlan from "./components/SelectPlan"
 import Addons from "./components/Addons"
 import Summary from "./components/Summary"
