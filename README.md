@@ -1,4 +1,4 @@
-#Multistep Form
+# Multistep Form
 
 The Multistep Form project is a comprehensive open-source project built with ReactJS and SASS, utilizing the Vite framework for rapid development. This project aims to simplify the process of creating multistep forms in web applications, providing an intuitive and user-friendly experience for form submissions.
 
