@@ -1,0 +1,122 @@
+@import "variables";
+
+.summary{
+    
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    margin-left: 35px;
+    margin-top: 40px;
+    z-index: 100;
+    
+
+    .header{
+
+        display: flex;
+        flex-direction: column;
+        color: $marineBlue;
+
+        p{
+            color: $coolGray;
+            margin-top: 10px;
+            margin-bottom: 20px;
+        }
+
+        h1{
+            font-size: 30px;
+            font-weight: 700;
+        }
+
+    }
+
+    .plan_biling{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+
+        div{
+            display: flex;
+            flex-direction: column;
+            gap: 5px;
+
+            h3{
+                
+                color: $marineBlue;
+                font-weight: 500;
+                font-size: 17px;
+            }
+            p{
+                font-size: 14px;
+                color: $coolGray;
+                text-decoration: underline;
+                cursor: pointer;
+            }
+        }
+
+        h3{
+            color: $marineBlue;
+            font-weight: 500;
+            font-size: 16px;
+        }
+    }
+
+    hr{
+        height: 1px;
+        border: 0;
+        border-top: 1px solid $lightGray;
+        border-radius: 10px;
+        margin-top: 10px;
+    }
+
+    .additional{
+        display: flex;
+        flex-direction: column;
+        gap: 15px;
+
+        div{
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+
+            p{
+                font-size: 14px;
+                color: $coolGray;
+            }
+
+            h3{
+                color: $marineBlue;
+                font-size: 15px;
+                font-weight: 500;
+            }
+        }
+    }
+
+
+    .total_price{
+        display: flex;
+        justify-content: space-between;
+        margin-top: 30px;
+
+        @media screen and (max-width: 805px) {
+            margin-top: 40px;
+        }
+
+        p{
+            font-size: 15px;
+            color: $coolGray;  
+        }
+
+        h2{
+            color: $purplishBlue;
+            font-size: 20px;
+            font-weight: 700;
+
+            @media screen and (max-width: 805px) {
+                margin-top: -4px;
+                
+            }
+        }
+    }
+
+    
+}

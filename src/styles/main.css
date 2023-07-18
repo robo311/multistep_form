@@ -1,0 +1,544 @@
+@import url("https://fonts.googleapis.com/css2?family=Ubuntu:wght@400;500;700&display=swap");
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+input {
+  font-family: "Ubuntu", sans-serif;
+}
+
+button {
+  font-family: "Ubuntu", sans-serif;
+}
+
+body {
+  font-family: "Ubuntu", sans-serif;
+  background-color: hsl(217, 100%, 97%);
+  font-size: 16px;
+  font-weight: 400;
+  overflow: auto;
+}
+
+.notice {
+  color: hsl(354, 84%, 57%);
+}
+
+.app {
+  margin-top: 100px;
+  display: flex;
+  justify-content: center;
+}
+@media screen and (max-width: 805px) {
+  .app {
+    flex-direction: column;
+    margin-top: 0;
+  }
+}
+@media screen and (min-width: 805px) {
+  .app img {
+    display: none;
+  }
+}
+.app .app-inner {
+  display: flex;
+  background-color: white;
+  justify-content: center;
+  padding: 10px 90px 10px 10px;
+  border-radius: 10px;
+  width: 850px;
+}
+@media screen and (max-width: 805px) {
+  .app .app-inner {
+    width: 350px;
+    flex-direction: column;
+    position: absolute;
+    top: 150px;
+    padding: 10px 25px 50px 10px;
+  }
+  .app .app-inner input {
+    z-index: 100;
+  }
+}
+
+@media screen and (max-width: 805px) {
+  .app-wrapper {
+    display: flex;
+    justify-content: center;
+  }
+}
+
+.buttons {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+  z-index: 100;
+}
+@media screen and (max-width: 805px) {
+  .buttons {
+    position: absolute;
+    left: 50%;
+    bottom: -120px;
+    transform: translateX(-50%);
+    width: 100%;
+  }
+}
+.buttons .next_button {
+  outline: none;
+  border: none;
+  border-radius: 10px;
+  padding: 15px 20px;
+  color: hsl(0, 0%, 100%);
+  background-color: hsl(213, 96%, 18%);
+  font-weight: 600;
+  font-size: 14px;
+  cursor: pointer;
+  margin-bottom: 20px;
+}
+.buttons .next_button:hover {
+  background-color: hsl(228, 93%, 73%);
+  transition: all;
+  transition-duration: 0.4s;
+  transition-timing-function: ease-out;
+}
+.buttons .back_button {
+  font-weight: 600;
+  font-size: 14px;
+  color: hsl(231, 11%, 63%);
+  cursor: pointer;
+  margin-left: 30px;
+  margin-bottom: 20px;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.panel {
+  height: 570px;
+  width: 300px;
+  background-image: url("../img/bg-sidebar-desktop.svg");
+  background-repeat: no-repeat;
+  color: hsl(0, 0%, 100%);
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+  padding: 30px;
+}
+@media screen and (max-width: 805px) {
+  .panel {
+    background-image: none;
+    flex-direction: row;
+    justify-content: center;
+    position: absolute;
+    top: -140px;
+    width: 330px;
+  }
+}
+.panel .text_wrapper {
+  display: flex;
+  gap: 20px;
+}
+@media screen and (max-width: 805px) {
+  .panel .text_wrapper {
+    display: block;
+  }
+}
+.panel .text_wrapper .circle {
+  border: white solid 1px;
+  border-radius: 100%;
+  padding: 10px 15px;
+  font-weight: 500;
+}
+.panel .text_wrapper .circle_activated {
+  border: hsl(228, 100%, 84%) solid 1px;
+  border-radius: 100%;
+  padding: 10px 15px;
+  background-color: hsl(206, 94%, 87%);
+  color: hsl(213, 96%, 18%);
+  font-weight: 500;
+  transition: all;
+  transition-duration: 0.2s;
+  transition-timing-function: ease-in;
+}
+.panel .text_wrapper div {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+.panel h2 {
+  font-weight: 400;
+  color: hsl(231, 11%, 63%);
+  font-size: 14px;
+}
+@media screen and (max-width: 805px) {
+  .panel h2 {
+    display: none;
+  }
+}
+.panel h1 {
+  font-weight: 700;
+  font-size: 16px;
+}
+@media screen and (max-width: 805px) {
+  .panel h1 {
+    display: none;
+  }
+}
+.panel h1 .link {
+  text-decoration: none;
+  color: white;
+}
+
+.personal_info {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  margin-left: 35px;
+  margin-top: 40px;
+}
+.personal_info div {
+  display: flex;
+  flex-direction: column;
+  color: hsl(213, 96%, 18%);
+}
+.personal_info div p {
+  color: hsl(231, 11%, 63%);
+  margin-top: 10px;
+  margin-bottom: 20px;
+}
+.personal_info div .label_input {
+  justify-content: space-between;
+  flex-direction: row;
+}
+.personal_info div .label_input label {
+  margin-bottom: 5px;
+  font-size: 15px;
+}
+.personal_info div h1 {
+  font-size: 30px;
+  font-weight: 700;
+}
+.personal_info div input {
+  border-radius: 10px;
+  color: hsl(213, 96%, 18%);
+  padding: 15px;
+  outline: none;
+  border: 1px solid hsl(231, 11%, 63%);
+}
+
+.select_plan {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  margin-left: 30px;
+  margin-top: 40px;
+  color: hsl(213, 96%, 18%);
+}
+.select_plan p {
+  color: hsl(231, 11%, 63%);
+  margin-top: 10px;
+  margin-bottom: 20px;
+}
+.select_plan h1 {
+  font-size: 30px;
+  font-weight: 700;
+}
+.select_plan .plan_wrapper {
+  display: flex;
+  gap: 15px;
+}
+@media screen and (max-width: 805px) {
+  .select_plan .plan_wrapper {
+    flex-direction: column;
+  }
+}
+.select_plan .plan_wrapper .card {
+  border: 1px solid hsl(229, 24%, 87%);
+  border-radius: 10px;
+  padding: 10px 20px;
+  min-width: 130px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  cursor: pointer;
+  z-index: 100;
+}
+@media screen and (max-width: 805px) {
+  .select_plan .plan_wrapper .card {
+    flex-direction: row;
+  }
+}
+.select_plan .plan_wrapper .card img {
+  width: 40px;
+  margin-top: 10px;
+  display: block;
+}
+@media screen and (max-width: 805px) {
+  .select_plan .plan_wrapper .card img {
+    margin-top: 0;
+  }
+}
+.select_plan .plan_wrapper .card p {
+  color: hsl(231, 11%, 63%);
+  font-size: 14px;
+  margin-top: 10px;
+  margin-bottom: 20px;
+}
+.select_plan .plan_wrapper .card h3 {
+  font-size: 16px;
+  font-weight: 600;
+}
+@media screen and (max-width: 805px) {
+  .select_plan .plan_wrapper .card h3 {
+    margin-top: 15px;
+  }
+}
+.select_plan .plan_wrapper .card .months_free {
+  color: hsl(213, 96%, 18%);
+}
+
+.biling {
+  display: flex;
+  justify-content: center;
+  margin-top: 10px;
+  font-size: 14px;
+  gap: 30px;
+  font-weight: 600;
+}
+.biling .switch {
+  font-size: 12px;
+  position: relative;
+  display: inline-block;
+  width: 3.8em;
+  height: 2em;
+  margin-top: 8px;
+}
+.biling .switch input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+.biling .slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: hsl(213, 96%, 18%);
+  border: 1px solid hsl(213, 96%, 18%);
+  transition: 0.4s;
+  border-radius: 30px;
+}
+.biling .slider:before {
+  position: absolute;
+  content: "";
+  height: 1.3em;
+  width: 1.3em;
+  border-radius: 20px;
+  left: 0.27em;
+  bottom: 0.25em;
+  background-color: hsl(0, 0%, 100%);
+  transition: 0.4s;
+}
+.biling input:checked + .slider {
+  background-color: hsl(213, 96%, 18%);
+  border: 1px solid hsl(213, 96%, 18%);
+}
+.biling input:focus + .slider {
+  box-shadow: 0 0 1px hsl(213, 96%, 18%);
+}
+.biling input:checked + .slider:before {
+  transform: translateX(1.8em);
+  background-color: #fff;
+}
+
+.addons {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  margin-left: 30px;
+  margin-top: 40px;
+  color: hsl(213, 96%, 18%);
+}
+.addons p {
+  color: hsl(231, 11%, 63%);
+  margin-top: 10px;
+  margin-bottom: 20px;
+}
+.addons h1 {
+  font-size: 30px;
+  font-weight: 700;
+}
+.addons .addons_wrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+.addons .addons_wrapper .card {
+  border: 1px solid hsl(229, 24%, 87%);
+  border-radius: 10px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 20px;
+  padding: 0px 15px;
+  cursor: pointer;
+  z-index: 100;
+}
+.addons .addons_wrapper .card div {
+  margin-top: 15px;
+}
+.addons .addons_wrapper .card div h3 {
+  font-size: 16px;
+}
+.addons .addons_wrapper .card div p {
+  font-size: 14px;
+}
+.addons .addons_wrapper .card .price {
+  margin-left: 94px;
+  margin-top: 20px;
+  font-size: 14px;
+  color: hsl(243, 100%, 62%);
+}
+@media screen and (max-width: 805px) {
+  .addons .addons_wrapper .card .price {
+    margin-left: 20px;
+  }
+}
+
+.summary {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  margin-left: 35px;
+  margin-top: 40px;
+  z-index: 100;
+}
+.summary .header {
+  display: flex;
+  flex-direction: column;
+  color: hsl(213, 96%, 18%);
+}
+.summary .header p {
+  color: hsl(231, 11%, 63%);
+  margin-top: 10px;
+  margin-bottom: 20px;
+}
+.summary .header h1 {
+  font-size: 30px;
+  font-weight: 700;
+}
+.summary .plan_biling {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.summary .plan_biling div {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+.summary .plan_biling div h3 {
+  color: hsl(213, 96%, 18%);
+  font-weight: 500;
+  font-size: 17px;
+}
+.summary .plan_biling div p {
+  font-size: 14px;
+  color: hsl(231, 11%, 63%);
+  text-decoration: underline;
+  cursor: pointer;
+}
+.summary .plan_biling h3 {
+  color: hsl(213, 96%, 18%);
+  font-weight: 500;
+  font-size: 16px;
+}
+.summary hr {
+  height: 1px;
+  border: 0;
+  border-top: 1px solid hsl(229, 24%, 87%);
+  border-radius: 10px;
+  margin-top: 10px;
+}
+.summary .additional {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+.summary .additional div {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.summary .additional div p {
+  font-size: 14px;
+  color: hsl(231, 11%, 63%);
+}
+.summary .additional div h3 {
+  color: hsl(213, 96%, 18%);
+  font-size: 15px;
+  font-weight: 500;
+}
+.summary .total_price {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 30px;
+}
+@media screen and (max-width: 805px) {
+  .summary .total_price {
+    margin-top: 40px;
+  }
+}
+.summary .total_price p {
+  font-size: 15px;
+  color: hsl(231, 11%, 63%);
+}
+.summary .total_price h2 {
+  color: hsl(243, 100%, 62%);
+  font-size: 20px;
+  font-weight: 700;
+}
+@media screen and (max-width: 805px) {
+  .summary .total_price h2 {
+    margin-top: -4px;
+  }
+}
+
+.end_screen {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+  text-align: center;
+  margin-left: 30px;
+  margin-top: 100px;
+  padding: 20px;
+}
+@media screen and (max-width: 805px) {
+  .end_screen {
+    margin-left: 0;
+  }
+}
+.end_screen img {
+  display: block;
+  margin-bottom: 20px;
+}
+.end_screen h1 {
+  color: hsl(213, 96%, 18%);
+}
+.end_screen p {
+  color: hsl(231, 11%, 63%);
+  width: 400px;
+}
+@media screen and (max-width: 805px) {
+  .end_screen p {
+    width: 100%;
+  }
+}/*# sourceMappingURL=main.css.map */

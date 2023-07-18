@@ -1,0 +1,86 @@
+@import "variables";
+
+
+.panel{
+    height: 570px;
+    width: 300px;
+    background-image: url("../img/bg-sidebar-desktop.svg");
+    background-repeat: no-repeat;
+    color: $white;
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    padding: 30px;
+
+
+    @media screen and (max-width: 805px) {
+        background-image: none;
+        flex-direction: row;
+        justify-content: center;
+        position: absolute;
+        top: -140px;
+        width: 330px;
+        
+    }
+    
+    
+    .text_wrapper{
+        display: flex;
+        gap: 20px;
+
+        @media screen and (max-width: 805px) {
+            display: block;
+        }
+        
+        .circle{
+            border: white solid 1px;
+            border-radius: 100%;
+            padding: 10px 15px;
+            font-weight: 500;
+        }
+
+        .circle_activated{
+            border: $pastelBlue solid 1px;
+            border-radius: 100%;
+            padding: 10px 15px;
+            background-color: $lightBlue;
+            color: $marineBlue;
+            font-weight: 500;
+            transition: all;
+            transition-duration: 0.2s;
+            transition-timing-function: ease-in;
+        }
+
+        div{
+            display: flex;
+            flex-direction: column;
+            gap: 2px;
+        }
+    }
+
+
+    h2{
+        font-weight: 400;
+        color: $coolGray;
+        font-size: 14px;
+
+        @media screen and (max-width: 805px) {
+            display: none;
+        }
+    }
+
+    h1{
+        font-weight: 700;
+        font-size: 16px;
+
+        @media screen and (max-width: 805px) {
+            display: none;
+        }
+
+        .link{
+            text-decoration: none;
+            color: white;
+        }
+    }
+
+}

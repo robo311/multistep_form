@@ -1,0 +1,153 @@
+@import "variables";
+
+
+
+.select_plan{
+    
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    margin-left: 30px;
+    margin-top: 40px;
+    color: $marineBlue;
+
+    p{
+        color: $coolGray;
+        margin-top: 10px;
+        margin-bottom: 20px;
+    }
+
+    h1{
+        font-size: 30px;
+        font-weight: 700;
+    }
+
+    .plan_wrapper{
+
+        display: flex;
+        gap: 15px;
+
+        @media screen and (max-width: 805px) {
+            flex-direction: column;
+        }
+
+        .card{
+           border: 1px solid $lightGray;
+           border-radius: 10px;
+           padding: 10px 20px;
+           min-width: 130px;
+           display: flex;
+           flex-direction: column;
+           gap: 20px;
+           cursor: pointer;
+           z-index: 100;
+
+            @media screen and (max-width: 805px) {
+                flex-direction: row;
+            }
+
+
+            img{
+                width: 40px;
+                margin-top: 10px;
+                display: block;
+
+                @media screen and (max-width: 805px) {
+                    margin-top: 0;
+                    
+                }
+    
+            }
+
+            p{
+                color: $coolGray;
+                font-size: 14px;
+                margin-top: 10px;
+                margin-bottom: 20px;
+            }
+
+            h3{
+                font-size: 16px;
+                font-weight: 600;
+
+                @media screen and (max-width: 805px) {
+                    margin-top: 15px;
+                }
+            }
+
+            .months_free{
+                color: $marineBlue;
+            }
+        }
+    }
+
+}
+
+
+.biling{
+    display: flex;
+    justify-content: center;
+    margin-top: 10px;
+    font-size: 14px;
+    gap: 30px;
+    font-weight: 600;
+
+
+    .switch {
+        font-size: 12px;
+        position: relative;
+        display: inline-block;
+        width: 3.8em;
+        height: 2em;
+        margin-top: 8px;
+    }
+      
+    
+    .switch input {
+        opacity: 0;
+        width: 0;
+        height: 0;
+    }
+      
+     
+    .slider {
+        position: absolute;
+        cursor: pointer;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background-color: $marineBlue;
+        border: 1px solid $marineBlue;
+        transition: .4s;
+        border-radius: 30px;
+    }
+      
+    .slider:before {
+        position: absolute;
+        content: "";
+        height: 1.3em;
+        width: 1.3em;
+        border-radius: 20px;
+        left: 0.27em;
+        bottom: 0.25em;
+        background-color: $white;
+        transition: .4s;
+    }
+      
+    input:checked + .slider {
+        background-color: $marineBlue;
+        border: 1px solid $marineBlue;
+    }
+      
+    input:focus + .slider {
+        box-shadow: 0 0 1px $marineBlue;
+    }
+    
+    input:checked + .slider:before {
+        transform: translateX(1.8em);
+        background-color: #fff;
+    }
+
+}
+

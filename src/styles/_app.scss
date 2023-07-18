@@ -1,0 +1,112 @@
+@import "variables";
+
+.app{
+    margin-top: 100px;
+    display: flex;
+    justify-content: center;
+
+    @media screen and (max-width: 805px) {
+        flex-direction: column;
+        margin-top: 0;
+    }
+
+
+    @media screen and (min-width: 805px) {
+        img{
+            display: none;
+        }
+    }
+
+
+    .app-inner{
+        display: flex;
+        background-color: white;
+        justify-content: center;
+        padding: 10px 90px 10px 10px;
+        border-radius: 10px;
+        width: 850px;
+
+        @media screen and (max-width: 805px) {
+            width: 350px;
+            flex-direction: column;
+            position: absolute;
+            top: 150px;
+            padding: 10px 25px 50px 10px;
+            
+            input{
+                z-index: 100;
+            }
+           
+        }
+        
+    }
+    
+}
+
+.app-wrapper{
+    @media screen and (max-width: 805px) {
+        display: flex;
+        justify-content: center;
+    }
+}
+
+.buttons{
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+    z-index: 100;
+
+    
+    @media screen and (max-width: 805px) {
+        position: absolute;
+        left: 50%;
+        bottom: -120px;
+        transform: translateX(-50%);
+        width: 100%;
+        
+    }
+
+   
+    .next_button{
+        outline: none;
+        border: none;
+        border-radius: 10px;
+        padding: 15px 20px;
+        color: $white;
+        background-color: $marineBlue;
+        font-weight: 600;
+        font-size: 14px;
+        cursor: pointer;
+        margin-bottom: 20px;
+        
+
+    }
+
+    .next_button:hover{
+        background-color: hsl(228, 93%, 73%);
+        transition: all;
+        transition-duration: 0.4s;
+        transition-timing-function: ease-out;
+
+    }
+    
+    
+    .back_button{
+        font-weight: 600;
+        font-size: 14px;
+        color: $coolGray;
+        cursor: pointer;
+        margin-left: 30px;
+        margin-bottom: 20px;
+        
+    }
+}
+
+.container{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+
+}
